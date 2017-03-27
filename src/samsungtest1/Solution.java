@@ -22,7 +22,8 @@ public class Solution {
      */
     
     
-    public static int solution(int A, int B) {
+    public static int solution(int A, int B) 
+    {
         // write your code in Java SE 8
         
         String theDecimalZip = null;
@@ -60,13 +61,11 @@ public class Solution {
        
        if(stackOfNumberA.size() > stackOfNumberB.size())
        { 
-           max = stackOfNumberA.size();
-           
+           max = stackOfNumberA.size();   
        }
        else 
        {  
-           max = stackOfNumberB.size();
-           
+           max = stackOfNumberB.size();   
        }
         
         sizeOfA = stackOfNumberA.size();
@@ -74,14 +73,14 @@ public class Solution {
         
        for( int j = 0; j < max; j++)
        {   
-           if(sizeOfA > 0 )
+           if(sizeOfA > 0)
            {    
                 theDecimalZip =  stackOfNumberA.pop().toString();
                 sb = sb.append(theDecimalZip);
                 sizeOfA--;
            }
            
-           if(sizeOfB > 0 ) 
+           if(sizeOfB > 0) 
            {   
                 theDecimalZip =  stackOfNumberB.pop().toString();
                 sb = sb.append(theDecimalZip);
@@ -89,6 +88,7 @@ public class Solution {
            }
         }
        
+        //convert final String to Integer
         finalDecimalZip  = Integer.parseInt(sb.toString());
         
         if(finalDecimalZip > 100000000)
