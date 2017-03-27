@@ -39,22 +39,22 @@ public class Solution {
         while( A >= 10)
         {
            digit = A  % 10;
-           stackOfNumberA.add(digit);
+           stackOfNumberA.push(digit);
            A =  A / 10;  
         }
-        
-         stackOfNumberA.add(A);
+        //pushing the very first digit of A on top of stack
+         stackOfNumberA.push(A);
         
         
         //Stack B
         while( B >= 10)
         {
            digit = B  % 10;
-           stackOfNumberB.add(digit);
+           stackOfNumberB.push(digit);
            B =  B / 10;  
         }
-        
-        stackOfNumberB.add(B);
+        //pushing the very first digit of B on top of stack
+        stackOfNumberB.push(B);
         
        long max = 0;
        
